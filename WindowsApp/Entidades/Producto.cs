@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace WindowsApp.Entidades
 {
-    internal class Producto
+    public class Producto
     {
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public decimal precioCosto {get; set; }
-        public double margen { get; set; } 
-        public double iva { get; set; }   
-        public decimal precioBruto {
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public decimal PrecioCosto {get; set; }
+        public double Margen { get; set; } 
+        public double Iva { get; set; }   
+        public decimal PrecioBruto {
             get
             {
-                decimal precioBruto = precioCosto + (decimal)margen;
+                decimal precioBruto = PrecioCosto + (decimal) Margen;
                 return precioBruto;
             }
         }
         public decimal precioVenta { 
             get
             {
-                Decimal precioVenta = precioBruto + Convert.ToDecimal(1+iva);
+                Decimal precioVenta = PrecioBruto + Convert.ToDecimal(1+Iva);
                 return precioVenta;
             }
         }

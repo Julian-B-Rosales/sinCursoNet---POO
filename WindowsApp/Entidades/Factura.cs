@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsApp.Entidades
 {
-    internal class Factura
+    public class Factura:DocumentoComercial
     {
-        public string tipo { get; set; }
-        public string numero { get; set; }
-        public DateTime fecha { get; set; }
-        public string cliente { get; set; }
-        public string direccion { get; set; }
-        public string condicionIVA { get; set; }
-        public string condicionVenta { get; set; }
-        public string detalle { get; set; }
-        public decimal total { get; set; }
+        public string Tipo { get; set; }
+        public string Numero { get; set; }
     }
 }
